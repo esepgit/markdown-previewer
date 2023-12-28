@@ -1,45 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
 :root {
   --bg-color: #1a5a88;
   --header-color: #153067;
-  --body-color: #2390a8;
+  --body-color: #a3ebfb;
   --text-color: snow; 
+}
+
+body {
+  padding: 0;
+  margin: 0;
 }
 
 #root {
   background-color: var(--bg-color);
+  min-height: 100vw;
   height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
   padding: 20px;
 }
 
 .editor-wrap {
   border: 1px solid black;
+  box-shadow: 15px 10px 10px 1px rgba(0, 0, 0, 0.3);
 }
 
 .editor-header {
-  height: 30px;
+  height: 35px;
   background-color: var(--header-color);
+  color: var(--text-color);
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  
+}
+
+.editor-header p {
+  margin-left: 20px;
 }
 
 #editor {
   background-color: var(--body-color);
   resize: vertical;
+  margin-bottom: -3px;
+  padding-left: 10px
 }
 
 .preview-wrap {
   border: 1px solid black;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  box-shadow: 15px 10px 10px 1px rgba(0, 0, 0, 0.3);
+  overflow-wrap: break-word;
 }
 
 .preview-header {
-  height: 30px;
+  height: 35px;
   background-color: var(--header-color);
+  color: var(--text-color);
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.preview-header p {
+  margin-left: 20px
 }
 
 #preview {
   background-color: var(--body-color);
-  width: 80%;
+  min-height: 200px;
+  padding: 0 10px;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+}
+
+#preview code {
+  background: white;
+  font-size: 0.875rem;
+  font-weight: bold;
+}
+
+#preview pre {
+  display: block;
+  overflow: auto;
+  background: white;
+  padding: 5px;
+  line-height: 1.2;
+}
+#preview table {
+  border-collapse: collapse;
+  display: block;
+  max-width: 100%;
+  overflow: scroll;
+}
+#preview td,
+#preview th {
+  border: 2px solid #224b4b;
+  padding-left: 5px;
+  padding-right: 5px;
+  
+}
+#preview img {
+  display: block;
+  width: 90%;
+  margin: 2rem auto;
 }

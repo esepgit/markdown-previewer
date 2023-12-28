@@ -1,0 +1,45 @@
+:root {
+  --bg-color: #1a5a88;
+  --header-color: #153067;
+  --body-color: #2390a8;
+  --text-color: snow; 
+}
+
+#root {
+  background-color: var(--bg-color);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.editor-wrap {
+  border: 1px solid black;
+}
+
+.editor-header {
+  height: 30px;
+  background-color: var(--header-color);
+}
+
+#editor {
+  background-color: var(--body-color);
+  resize: vertical;
+}
+
+.preview-wrap {
+  border: 1px solid black;
+}
+
+.preview-header {
+  height: 30px;
+  background-color: var(--header-color);
+}
+
+#preview {
+  background-color: var(--body-color);
+  width: 80%;
+}
